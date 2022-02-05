@@ -109,7 +109,7 @@ function getedKomaAdder(komaNumber) {
     if(komaNumber>=10) {
         let newele = document.createElement("img");
         let getedKomaImage = choseKoma(komaNumber/10);
-        newele.src = `/images/${getedKomaImage}`;
+        newele.src = `${getedKomaImage}`;
         getedKomaMe+=[komaNumber];
         newele.id = `${komaNumber*100}`;
         document.getElementById("getedKomaMe").appendChild(newele);
@@ -117,7 +117,7 @@ function getedKomaAdder(komaNumber) {
     } else if(komaNumber<10&&komaNumber!==0){
         let newele = document.createElement("img");
         let getedKomaImage = choseKoma(komaNumber);
-        newele.src = `/images/${getedKomaImage}`;
+        newele.src = `${getedKomaImage}`;
         getedKomaYou+=[komaNumber];
         newele.style.transform = "rotate(180deg)"
         newele.id = `${komaNumber*100}`;
@@ -201,7 +201,7 @@ function drawPieces() {
             }
             const image = choseKoma(element);
             if(image != undefined) {
-                newEle.src = `/images/${image}`;
+                newEle.src = `${image}`;
                 document.getElementById(`${n*9+x+1}`).appendChild(newEle);
             } else {
                 newEle.src = "";
