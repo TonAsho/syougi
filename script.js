@@ -231,7 +231,7 @@ function getedKomaAdder(komaNumber) {
     if(komaNumber>=10) {
         let newele = document.createElement("img");
         let getedKomaImage = choseKoma(komaNumber/10);
-        newele.src = `/images/${getedKomaImage}`;
+        newele.src = `${getedKomaImage}`;
         getedKomaMe[average] = komaNumber/10;
         newele.id = `${average}`;
         document.getElementById("getedKomaMe2").appendChild(newele);
@@ -240,7 +240,7 @@ function getedKomaAdder(komaNumber) {
     } else if(komaNumber<10&&komaNumber>0){
         let newele = document.createElement("img");
         let getedKomaImage = choseKoma(komaNumber);
-        newele.src = `/images/${getedKomaImage}`;
+        newele.src = `${getedKomaImage}`;
         getedKomaYou[average] = komaNumber*10;
         newele.style.transform = "rotate(180deg)"
         newele.id = `${average}`
@@ -250,7 +250,7 @@ function getedKomaAdder(komaNumber) {
     } else if(komaNumber<0&&komaNumber>-10) {
         let newele = document.createElement("img");
         let getedKomaImage = choseKoma(komaNumber*-1);
-        newele.src = `/images/${getedKomaImage}`;
+        newele.src = `${getedKomaImage}`;
         getedKomaYou[average] = komaNumber*-10;
         newele.id = `${average}`
         newele.style.transform = "rotate(180deg)"
@@ -260,7 +260,7 @@ function getedKomaAdder(komaNumber) {
     } else if(komaNumber <= -10) {
         let newele = document.createElement("img");
         let getedKomaImage = choseKoma(komaNumber*-0.1);
-        newele.src = `/images/${getedKomaImage}`;
+        newele.src = `${getedKomaImage}`;
         getedKomaMe[average] = komaNumber*-0.1;
         newele.id = `${average}`
         document.getElementById("getedKomaMe2").appendChild(newele);
@@ -450,7 +450,7 @@ function drawPieces() {
             }
             const image = choseKoma(element);
             if(image != undefined) {
-                newEle.src = `/images/${image}`;
+                newEle.src = `${image}`;
                 document.getElementById(`${n*9+x+1}`).appendChild(newEle);
             } else {
                 newEle.src = "";
@@ -1524,7 +1524,7 @@ function cleanGeted() {
         for (let key in getedKomaMe) {
             let newele = document.createElement("img");
             let getedKomaImage = choseKoma(getedKomaMe[key]);
-            newele.src = `/images/${getedKomaImage}`;
+            newele.src = `${getedKomaImage}`;
             newele.id = `${key}`;
             document.getElementById("getedKomaMe2").appendChild(newele);
             goPiecesGeted(Number(key));
@@ -1534,7 +1534,7 @@ function cleanGeted() {
         for (let key in getedKomaYou) {
             let neweles = document.createElement("img");
             let getedKomaImage = choseKoma(getedKomaYou[key]/10);
-            neweles.src = `/images/${getedKomaImage}`;
+            neweles.src = `${getedKomaImage}`;
             neweles.id = `${key}`;
             neweles.style.transform = "rotate(180deg)";
             document.getElementById("getedKomaYou2").appendChild(neweles);
