@@ -817,7 +817,7 @@ function restrictPieces(komaNumber, komaShape) {
                 if(getNumber(n) === 0) {
                     returnKomas.push(n);
                 } else {
-                    if(isOkYour(komaNumber+9)) {
+                    if(isOkYour(komaNumber)) {
                         returnKomas.push(n);
                     }
                     return returnKomas;
